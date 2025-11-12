@@ -6,7 +6,7 @@ const paginaAtual = document.title.toLowerCase().includes("meus livros") ? "todo
                     "todos";
 
 // Carrega os livros
-fetch('Data/Livros.json')
+fetch('data/livros.json')
   .then(res => res.json())
   .then(livros => {
     const container = document.getElementById('livros-container');

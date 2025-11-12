@@ -1,0 +1,255 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  /* reduzir 40% do padding original 2rem -> 1.2rem */
+  padding: 1.2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+  position: relative;
+  transition: padding 0.45s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.45s ease, background 0.45s ease;
+}
+
+header .logo-link {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+header .logo-link:hover {
+  transform: scale(1.05);
+}
+
+header .logo-link h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header nav {
+  margin: 1rem 0 0.6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #434343 0%, #000000 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#theme-toggle {
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: rotate(15deg) scale(1.03);
+}
+
+/* Container dos cards */
+#livros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s, filter 0.35s;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(102, 126, 234, 0.08);
+  z-index: 1;
+}
+
+body.dark .card {
+  background: linear-gradient(135deg, #2d2d3d 0%, #1a1a2e 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  z-index: 40; /* ficar acima do desfoque */
+}
+
+body.dark .card:hover {
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-info {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 244, 255, 0.95) 100%);
+}
+
+body.dark .card-info {
+  background: linear-gradient(135deg, rgba(45, 45, 61, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+body.dark .card h3 {
+  color: #e0e0e0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.4rem 0;
+}
+
+body.dark .card p {
+  color: #b0b0b0;
+}
+
+/* Resumo */
+.resumo {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(50, 50, 80, 0.95) 100%);
+  color: white;
+  padding: 1.2rem;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.2,0.8,0.2,1);
+  overflow-y: auto;
+}
+
+.card:hover .resumo,
+.card:focus .resumo,
+.card.show-resumo .resumo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 50;
+}
+
+.resumo p {
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Efeito de desfoque no conteúdo de livros quando um card é hover/focado.
+   Aplicamos o blur apenas aos filhos diretos de #livros-container para
+   garantir que o card ativo possa ser facilmente excluído do efeito. */
+body.page-blur #livros-container > * {
+  transition: filter 0.25s ease;
+  filter: blur(6px);
+}
+
+/* O card atual (direto filho de #livros-container) e seus descendentes não devem ser desfocados */
+body.page-blur #livros-container > .card.no-blur,
+body.page-blur #livros-container > .card.no-blur * {
+  filter: none !important;
+}
+body.page-blur #livros-container > .card.no-blur {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(102,126,234,0.4);
+  z-index: 100;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  header .logo-link h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 800px) {
+  #livros-container {
+    gap: 1.4rem;
+    padding: 2rem 1rem;
+  }
+
+  .card img { height: 240px; }
+}
+
+@media (max-width: 480px) {
+  #livros-container { grid-template-columns: 1fr; padding: 1rem; }
+  .card img { height: 180px; }
+  .card-info { padding: 0.9rem; }
+  .resumo p { font-size: 0.95rem; }
+}

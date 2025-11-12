@@ -35,11 +35,11 @@ fetch('Data/Livros.json')
         </div>
         <div class="resumo">
           <p>${livro.resumo}</p>
-        </div>
+        </div> 
       `;
       container.appendChild(card);
 
-      // efeitos de desfoque global: ao entrar no card, desfoca a página e mantém o card nítido
+      // efeitos de desfoque global: ao entrar no card, desfoca a página e mantém o card nítido.
       const onEnter = () => {
         document.body.classList.add('page-blur');
         card.classList.add('no-blur');

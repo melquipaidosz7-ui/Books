@@ -25,5 +25,59 @@
   "capa": "img/capas/Dom-Casmurro.jpg",
     "resumo": "Bentinho, já velho e isolado, narra sua história de amor por Capitu e a suposta traição que o atormenta. A narrativa é subjetiva e ambígua, misturando lembrança e manipulação—deixando o leitor em dúvida sobre a verdade.",
     "status": "lido"
+  },
+    {
+    "id": 4,
+    "titulo": "O Alienista",
+    "autor": "Machado de Assis",
+    "paginas": 96,
+  "capa": "img/capas/o-alienista.jpg",
+    "resumo": "Conta a história do Dr. Simão Bacamarte, médico que funda a Casa Verde para estudar a loucura. Obcecado em definir o que é sanidade, acaba internando quase toda a cidade, até inverter sua própria lógica.",
+    "status": "a-ler"
+  },
+  {
+    "id": 5,
+    "titulo": "Memórias Póstumas de Brás Cubas",
+    "autor": "Machado de Assis",
+    "paginas": 188,
+  "capa": "img/capas/memorias-postumas-de-bras-cubas.jpg",
+    "resumo": "Narrada por um defunto-autor que se apresenta após a morte, a obra é uma confissão irônica e descontínua das memórias de Brás Cubas, que revive episódios de sua vida — amores fracassados, ambições moderadas e pequenas maldades sociais — sem pretensão de moralizar. O narrador, distante e sarcástico, relata episódios com humor ácido e precisão psicológica, adotando uma perspectiva que desmonta a vaidade das convenções sociais.",
+    "status": "lendo"
+  },
+  {
+    "id": 6,
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "paginas": 204,
+  "capa": "img/capas/Dom-Casmurro.jpg",
+    "resumo": "Bentinho, já velho e isolado, narra sua história de amor por Capitu e a suposta traição que o atormenta. A narrativa é subjetiva e ambígua, misturando lembrança e manipulação—deixando o leitor em dúvida sobre a verdade.",
+    "status": "lido"
+  },
+    {
+    "id": 7,
+    "titulo": "O Alienista",
+    "autor": "Machado de Assis",
+    "paginas": 96,
+  "capa": "img/capas/o-alienista.jpg",
+    "resumo": "Conta a história do Dr. Simão Bacamarte, médico que funda a Casa Verde para estudar a loucura. Obcecado em definir o que é sanidade, acaba internando quase toda a cidade, até inverter sua própria lógica.",
+    "status": "a-ler"
+  },
+  {
+    "id": 8,
+    "titulo": "Memórias Póstumas de Brás Cubas",
+    "autor": "Machado de Assis",
+    "paginas": 188,
+  "capa": "img/capas/memorias-postumas-de-bras-cubas.jpg",
+    "resumo": "Narrada por um defunto-autor que se apresenta após a morte, a obra é uma confissão irônica e descontínua das memórias de Brás Cubas, que revive episódios de sua vida — amores fracassados, ambições moderadas e pequenas maldades sociais — sem pretensão de moralizar. O narrador, distante e sarcástico, relata episódios com humor ácido e precisão psicológica, adotando uma perspectiva que desmonta a vaidade das convenções sociais.",
+    "status": "lendo"
+  },
+  {
+    "id": 9,
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "paginas": 204,
+  "capa": "img/capas/Dom-Casmurro.jpg",
+    "resumo": "Bentinho, já velho e isolado, narra sua história de amor por Capitu e a suposta traição que o atormenta. A narrativa é subjetiva e ambígua, misturando lembrança e manipulação—deixando o leitor em dúvida sobre a verdade.",
+    "status": "lido"
   }
 ]
